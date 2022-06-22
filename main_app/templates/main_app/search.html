@@ -1,0 +1,37 @@
+{% extends "main_app/base.html" %}
+{% load static %}
+{% block bodyblock %}
+<br>
+<div class="container h-100">
+   
+    <div class="text-center"><u> <h3 >Enter the url of the laptop to be tracked on Flipkart</h3></u></div>
+    <div class="row h-75 justify-content-center align-items-center">
+        
+        <div class="col-10 col-md-8 col-lg-6">
+            {% if not user.is_authenticated %}
+
+   <div class="text-center">you are not logged in! <a href = "{% url 'login' %}">login</a></div><br>
+{% endif %}
+
+        <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+        <label for="Email1">Email address</label>        
+        <input type = "text" class="form-control" name = "searchbox" placeholder = "Enter url" id="Email1">
+        </div>
+
+        <div class="form-group">
+        <label for="Password1">Maximum Price</label>
+        <input type = "number" class="form-control" name = "max_price" placeholder = "Enter Maximum Price" id ="Password1">
+        </div>
+        <button type = "submit" class="btn btn-primary" >Submit</button>
+
+    </form>
+
+</div>
+</div>
+</div>
+
+
+
+{% endblock %}
