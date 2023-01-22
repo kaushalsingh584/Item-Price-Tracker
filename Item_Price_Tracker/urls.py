@@ -18,6 +18,7 @@ from django.urls import path
 from users.views import register
 from django.contrib.auth.views import LoginView,LogoutView
 from main_app.views import search,index
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 # extra
 # from Item_Price_Tracker.users.views import register
 

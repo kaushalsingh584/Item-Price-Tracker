@@ -26,7 +26,7 @@ SECRET_KEY = 'x*(-hehy28nm9)lbrst-v*d9@gkx7l#ab7+h7x5f-@5s+edgpw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -121,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = 'media/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # this LOGIN_URL is executed when the user is not logged in
